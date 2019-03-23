@@ -18,6 +18,11 @@
             <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
           </li>
       {{ end }}
+      {{ if .Site.Params.showCertifications }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#certifications">Certifications</a>
+          </li>
+      {{ end }}
       {{ if .Site.Params.showProjects }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>

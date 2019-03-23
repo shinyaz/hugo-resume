@@ -3,6 +3,9 @@
    {{ if .Site.Params.showSkills }}
        {{ partial "portfolio/skills.html" . }}
    {{ end }}
+   {{ if .Site.Params.showCertifications }}
+       {{ partial "portfolio/certifications.html" . }}
+   {{ end }}
    {{ if .Site.Params.showProjects }}
       {{ with .Site.GetPage "section" "projects/creations" }}
          {{ .Scratch.Set "sectionId" "projects" }}
