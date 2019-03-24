@@ -53,6 +53,9 @@
             <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
           </li>
       {{ end }}
+      {{ if .Site.IsMultiLingual }}
+        {{ partial "language-selector.html" . }}
+      {{ end }}
     </ul>
   </div>
 </nav>
