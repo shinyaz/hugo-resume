@@ -1,7 +1,11 @@
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certifications">
   <div class="my-auto" id="certifications-content">
     <h2 class="mb-5">Certifications</h2>
-    {{ range $.Site.Data.certifications }}
+    {{ $data := index .Site.Data }}
+    {{ if .Site.IsMultiLingual }}
+        {{ $data = index $data .Site.Language.Lang }}
+    {{ end }}
+    {{ range $data.certifications }}
         <div class="subheading mb-3 certifications-heading">{{ .grouping }}</div>
             <ul class="fa-ul mb-0">
             {{ range .certifications }}
